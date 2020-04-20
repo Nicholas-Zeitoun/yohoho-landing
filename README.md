@@ -1,9 +1,9 @@
-###Set up:
+Set up:
 
 ```Bundle install```
 ```Yarn install```
 
-###Run app:
+Run app:
 
 ```rails s```
 http://localhost:3000/
