@@ -1,3 +1,5 @@
+# Yohoho Landing Page
+
 Set up:
 
 ```Bundle install```
