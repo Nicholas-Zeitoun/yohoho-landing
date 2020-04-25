@@ -16,12 +16,15 @@
   display: flex;
   height: 300px;
   align-items: center;
-  background-color: $light-gray;
   justify-content: center;
-  transform: rotateZ(5deg);
   @media only screen and (max-width: 768px) {
     margin: 100px 0;
   }
+}
+
+#card-front-group {
+  background-color: $light-gray;
+  transform: rotateZ(5deg);
 }
 
 .card-image {
