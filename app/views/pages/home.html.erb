@@ -18,3 +18,48 @@
 <%= render partial: "landing/textImage" %>
 
 <%= render 'landing/video-subsection' %>
+
+<% @textImage = {
+    reverse: true,
+    title: 'Take action',
+    paragraph: 'Are you ready for a bit of pillage and plunder? Get ready to loot and steal in this fast-paced game of piracy.',
+    type: 'singleTextImage',
+    singleTextImage: {
+        image: 'shov-icon',
+        bgImage: 'take-action-prop',
+        sizeOffset: '17em',
+        xOffset: '0'
+    }
+} %>
+
+<%= render partial: "landing/textImage" %>
+
+<% @textImage = {
+    reverse: false,
+    title: 'Employ a little bit of piracy',
+    paragraph: 'Are you ready for a bit of pillage and plunder? Get ready to loot and steal in this fast-paced game of piracy.',
+    type: 'singleTextImage',
+    singleTextImage: {
+        image: 'dag-icon',
+        bgImage: 'employ-prop',
+        sizeOffset: '12em',
+        xOffset: '50px'
+    }
+} %>
+
+<%= render partial: "landing/textImage" %>
+
+<% @textImage = {
+    reverse: true,
+    title: 'Gather the booty!',
+    paragraph: 'Are you ready for a bit of pillage and plunder? Get ready to loot and steal in this fast-paced game of piracy.',
+    type: 'singleTextImage',
+    singleTextImage: {
+        image: 'chest-flat',
+        bgImage: 'gather-booty-prop',
+        sizeOffset: '14em',
+        xOffset: '-70px'
+    }
+} %>
+
+<%= render partial: "landing/textImage" %>
