@@ -22,25 +22,21 @@ body {
   background-color: white;
 }
 
-h1 {
+h1, h3, h4, h5, {
   font-family: Berlin-Sans-FB-Demi;
 }
 
-h3 {
-  font-family: Berlin-Sans-FB-Demi;
+p {
+  font-family: Cabin;
+  color: #606060;
+  font-size: 20px;
+  font-weight: 700;
 }
 
-  p {
-    font-family: Cabin;
-    color: #606060;
-    font-size: 20px;
-    font-weight: 700;
-  }
-
-  .yohoho-container {
-    max-width: 1000px;
-    overflow: hidden;
-  }
+.yohoho-container {
+  max-width: 1000px;
+  // overflow: hidden;
+}
 
 
 // Small devices (landscape phones, 576px and up)
@@ -50,6 +46,9 @@ h3 {
   }
   h3 {
     font-size: 24px;
+  }
+  h5 {
+    font-size: 18px;
   }
 }
 
@@ -61,6 +60,9 @@ h3 {
     h3 {
     font-size: 24px;
   }
+  h5 {
+    font-size: 18px;
+  }
 }
 
 // Large devices (desktops, 992px and up)
@@ -71,6 +73,9 @@ h3 {
     h3 {
     font-size: 42px;
   }
+  h5, h4 {
+    font-size: 36px;
+  }
 }
 
 // Extra large devices (large desktops, 1200px and up)
@@ -80,6 +85,9 @@ h3 {
   }
   h3 {
     font-size: 42px;
+  }
+  h5, h4 {
+    font-size: 36px;
   }
 
 }
