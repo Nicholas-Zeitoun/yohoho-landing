@@ -1,0 +1,54 @@
+
+
+<%
+    @image_text_classes = 'row pl-4 pr-4 partial-section text-image-container'
+    @image_container_classes = 'col-xs-12 col-md-4 col-md-offset-2 image-container'
+
+    @type = @text_image[:type]
+    @reverse = @text_image[:reverse]
+    @title = @text_image[:title]
+    @paragraph = @text_image[:paragraph]
+    @is_single_text_image = @type.eql?('single_text_image')
+
+    if(@is_single_text_image)
+        @image = @text_image[:single_text_image][:image]
+        @background_image = @text_image[:single_text_image][:background_image]
+        @x_offset = @text_image[:single_text_image][:x_offset]
+        @size_offset = @text_image[:single_text_image][:size_offset]
+
+        @x_offset_string = 'transform: translateX(' + @x_offset + ');'
+        @size_offset_string = 'width: ' + @size_offset + ';'
+    end
+%>
+
+<div
+    class="<%= @image_text_classes %> <%= @reverse ? 'reverse' : '' %> <%= @is_single_text_image ? 'single-text-image-container' : '' %>"
+    style="<%= @is_single_text_image ? @x_offset_string : '' %>"
+>
+    <div class="col-xs-12 col-md-6">
+        <h3><%= @title %></h3>
+        <p><%= @paragraph %></p>
+    </div>
+
+    <% if @type.eql?('cardFront') %>
+        <div class="<%= @image_container_classes %>" id="card-front-group">
+            <%= image_tag ("gold-dubloon"), class: "card-image", id: "first-card" %>
+            <%= image_tag ("bombs-away"), class: "card-image" , id: "second-card" %>
+            <%= image_tag ("emerald"), class: "card-image" , id: "third-card" %>
+        </div>
+    <% end %>
+    <% if @type.eql?('cardBack') %>
+        <div class="<%= @image_container_classes %>">
+            <%= image_tag ("pirate-card"), class: "card-image" , id: "pirate-card" %>
+            <%= image_tag ("treasure-card"), class: "card-image", id: "treasure-card" %>
+        </div>
+    <% end %>
+
+    <% if @is_single_text_image %>
+        <div class="<%= @image_container_classes %> sti-image-container">
+            <%= image_tag (@image), class: "card-image single-image", style: @size_offset_string %>
+            <%= image_tag (@background_image), class: "card-image bg-card-image", style: @size_offset_string %>
+        </div>
+    <% end %>
+
+</div>

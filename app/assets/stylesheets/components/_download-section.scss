@@ -1,0 +1,31 @@
+.download-container {
+  position: relative;
+  // width: 900px;
+  height: 600px;
+
+}
+
+.download-background {
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.download-button {
+  font-family: Cabin;
+  font-weight: 700;
+    width: 60%;
+    background: white;
+    color: black;
+    padding: 15px;
+    border-radius: 8px;
+
+}
