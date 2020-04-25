@@ -45,7 +45,7 @@
     <% end %>
 
     <% if @isSingleTextImage %>
-        <div class="<%= @imageContainerClasses %>">    
+        <div class="<%= @imageContainerClasses %> sti-image-container">    
             <%= image_tag (@image), class: "card-image single-image", style: @sizeOffsetString %>
             <%= image_tag (@bgImage), class: "card-image bg-card-image", style: @sizeOffsetString %>
         </div>
