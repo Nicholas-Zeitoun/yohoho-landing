@@ -1,0 +1,29 @@
+.cta-row {
+
+}
+
+
+.cta-text {
+  // height: 100px;
+  // background-color: blue;
+  position: absolute;
+  // color: white;
+  top: 35%;
+}
+
+.cta-cross {
+  // height: 100px;
+  // background-color: blue;
+  position: absolute;
+  z-index: -1;
+  // top: 25%;
+  left: 40%;
+}
+
+.cta-image {
+  position: relative;
+  // height: 100px;
+  // background-color: red;
+  z-index: -2;
+  top: 0px;
+}
