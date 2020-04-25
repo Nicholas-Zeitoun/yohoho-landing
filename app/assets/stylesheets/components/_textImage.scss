@@ -1,19 +1,21 @@
 
+
+
 .text-image-container {
   display: flex;
   width: 50%;
   align-items: center;
   justify-content: space-around;
 }
-.texts-container {
-  width: 40%;
-}
+
 .image-container {
   display: flex;
-  width: 40%;
   background-color: $light-gray;
   justify-content: center;
   transform: rotateZ(5deg);
+  @media only screen and (max-width: 768px) {
+    margin: 100px 0;
+  }
 }
 
 .card-image {
@@ -22,13 +24,13 @@
 }
 
 #first-card {
-    transform: translateX(18px) rotateZ(-20deg);
+    transform: translateX(64px) rotateZ(-20deg);
     z-index: 1;
 }
 #second-card {
-    transform: rotate(2deg) translateY(-31px);
+    transform: rotate(2deg) translateY(-47px);
 }
 #third-card {
-    transform: rotate(20deg) translateX(-21px);
+    transform: rotate(20deg) translateX(-47px);
     z-index: -1;
 }
