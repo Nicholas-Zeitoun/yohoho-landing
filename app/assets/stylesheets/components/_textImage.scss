@@ -1,5 +1,3 @@
-
-
 .reverse {
   flex-direction: row-reverse;
 }
@@ -14,7 +12,16 @@
   }
 }
 
+.single-text-image-container {
+  justify-content: center;
+
+  @media only screen and (max-width: $md) {
+    transform: translateX(0) !important;
+  }
+}
+
 .image-container {
+  position: relative;
   display: flex;
   height: 300px;
   align-items: center;
@@ -24,35 +31,55 @@
   }
 }
 
+.sti-image-container {
+  @media only screen and (max-width: $sm) {
+    height: 100px;
+  }
+}
+
 #card-front-group {
   background-color: $light-gray;
   transform: rotateZ(5deg);
 }
 
 .card-image {
-    width: 10em;
-    height: auto;
-    position: relative;
-    @media only screen and (max-width: $sm) {
-      width: 7em;
-    }
+  width: 10em;
+  height: auto;
+  position: relative;
+  @media only screen and (max-width: $md) {
+    width: 7em;
+  }
+}
+
+.single-image {
+  @media only screen and (max-width: $sm) {
+    width: 7em !important;
+  }
+}
+
+.bg-card-image {
+  position: absolute;
+  z-index: -1;
+  @media only screen and (max-width: $sm) {
+    width: 7em !important;
+  }
 }
 
 #first-card {
-    transform: translateX(64px) rotateZ(-20deg);
-    z-index: 1;
+  transform: translateX(64px) rotateZ(-20deg);
+  z-index: 1;
 }
 #second-card {
-    transform: rotate(2deg) translateY(-47px);
+  transform: rotate(2deg) translateY(-47px);
 }
 #third-card {
-    transform: rotate(20deg) translateX(-47px);
-    z-index: -1;
+  transform: rotate(20deg) translateX(-47px);
+  z-index: -1;
 }
 #pirate-card {
-    transform: rotate(-20deg) translateX(-14px);
+  transform: rotate(-20deg) translateX(-14px);
 }
 #treasure-card {
-    transform: rotate(14deg) translateX(-54px) translateY(-56px);
-    z-index: -1;
+  transform: rotate(14deg) translateX(-54px) translateY(-56px);
+  z-index: -1;
 }

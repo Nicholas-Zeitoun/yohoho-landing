@@ -1,28 +1,54 @@
 
 
-<% @defaultClasses = 'col-xs-12 col-md-4 col-md-offset-2 image-container' %>
+<% 
+    @imageTextClasses = 'row pl-4 pr-4 partial-section text-image-container'
+    @imageContainerClasses = 'col-xs-12 col-md-4 col-md-offset-2 image-container' 
 
+    @type = @textImage[:type]
+    @reverse = @textImage[:reverse]
+    @title = @textImage[:title]
+    @paragraph = @textImage[:paragraph]
+    @isSingleTextImage = @type.eql?('singleTextImage')
 
-<div class="row pl-4 pr-4 partial-section text-image-container <%= @textImage[:reverse] ? 'reverse' : '' %>">
+    if(@isSingleTextImage)
+        @image = @textImage[:singleTextImage][:image]
+        @bgImage = @textImage[:singleTextImage][:bgImage]
+        @xOffset = @textImage[:singleTextImage][:xOffset]
+        @sizeOffset = @textImage[:singleTextImage][:sizeOffset]
+
+        @xOffsetString = 'transform: translateX(' + @xOffset + ');'
+        @sizeOffsetString = 'width: ' + @sizeOffset + ';'
+    end
+%>
+
+<div 
+    class="<%= @imageTextClasses %> <%= @reverse ? 'reverse' : '' %> <%= @isSingleTextImage ? 'single-text-image-container' : '' %>"
+    style="<%= @xOffsetString %>"
+>
     <div class="col-xs-12 col-md-6">
-        <h3><%= @textImage[:title] %></h3>
-        <p><%= @textImage[:paragraph] %></p>
+        <h3><%= @title %></h3>
+        <p><%= @paragraph %></p>
     </div>
 
-    <% if @textImage[:type].eql?('cardFront') %>
-        <div class="<%= @defaultClasses %>" id="card-front-group">    
+    <% if @type.eql?('cardFront') %>
+        <div class="<%= @imageContainerClasses %>" id="card-front-group">    
             <%= image_tag ("gold-dubloon"), class: "card-image", id: "first-card" %>
             <%= image_tag ("bombs-away"), class: "card-image" , id: "second-card" %>
             <%= image_tag ("emerald"), class: "card-image" , id: "third-card" %>
         </div>
     <% end %>
-    <% if @textImage[:type].eql?('cardBack') %>
-        <div class="<%= @defaultClasses %>">    
+    <% if @type.eql?('cardBack') %>
+        <div class="<%= @imageContainerClasses %>">    
             <%= image_tag ("pirate-card"), class: "card-image" , id: "pirate-card" %>
             <%= image_tag ("treasure-card"), class: "card-image", id: "treasure-card" %>
         </div>
     <% end %>
-    
 
+    <% if @isSingleTextImage %>
+        <div class="<%= @imageContainerClasses %> sti-image-container">    
+            <%= image_tag (@image), class: "card-image single-image", style: @sizeOffsetString %>
+            <%= image_tag (@bgImage), class: "card-image bg-card-image", style: @sizeOffsetString %>
+        </div>
+    <% end %>
 
 </div>
