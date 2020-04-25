@@ -1,0 +1,17 @@
+
+
+
+
+<div class="row partial-section text-image-container">
+    <div class="col-xs-6 texts-container">
+        <h3><%= @textImage[:title] %></h3>
+        <p><%= @textImage[:paragraph] %></p>
+    </div>
+
+    <div class="col-xs-6 image-container">
+        <%= image_tag ("gold-dubloon"), class: "card-image", id: "first-card"  %>
+        <%= image_tag ("bombs-away"), class: "card-image" , id: "second-card" %>
+        <%= image_tag ("emerald"), class: "card-image" , id: "third-card" %>
+    </div>
+
+</div>

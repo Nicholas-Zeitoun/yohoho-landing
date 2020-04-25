@@ -1,11 +1,14 @@
 # Yohoho Landing Page
 
-Set up:
+## Set up
 
-```Bundle install```
-```Yarn install```
+```bash
+brew install ruby
+brew install postgresql
+bundle install
+yarn install
+```
+## Run app
 
-Run app:
-
-```rails s```
+`rails s`
 http://localhost:3000/
