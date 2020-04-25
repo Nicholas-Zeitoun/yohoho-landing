@@ -22,10 +22,14 @@
 .download-button {
   font-family: Cabin;
   font-weight: 700;
-    width: 60%;
-    background: white;
-    color: black;
-    padding: 15px;
-    border-radius: 8px;
+  width: 60%;
+  background: white;
+  color: #363636;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
 
+.button-icon {
+  font-size: 36px;
 }
