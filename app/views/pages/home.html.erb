@@ -1,7 +1,18 @@
 <%= render 'landing/header' %>
 
 <% @textImage = {
+    reverse: false,
     title: 'Now here be a game for pirates!',
-    paragraph: 'Are you ready for a bit of pillage and plunder? Get ready to loot and steal in this fast-paced game of piracy. Race your hearties to become the first pirate to bury all their treasure. and make sure to backstab as many as possible on the way to fame and fortune!'
+    paragraph: 'Are you ready for a bit of pillage and plunder? Get ready to loot and steal in this fast-paced game of piracy. Race your hearties to become the first pirate to bury all their treasure. and make sure to backstab as many as possible on the way to fame and fortune!',
+    type: 'cardFront'
+} %>
+<%= render partial: "landing/textImage" %>
+
+
+<% @textImage = {
+    reverse: true,
+    title: 'Now here be a game for pirates!',
+    paragraph: 'Are you ready for a bit of pillage and plunder? Get ready to loot and steal in this fast-paced game of piracy. Race your hearties to become the first pirate to bury all their treasure. and make sure to backstab as many as possible on the way to fame and fortune!',
+    type: 'cardBack'
 } %>
 <%= render partial: "landing/textImage" %>

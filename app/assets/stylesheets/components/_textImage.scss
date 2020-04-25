@@ -1,5 +1,8 @@
 
 
+.reverse {
+  flex-direction: row-reverse;
+}
 
 .text-image-container {
   display: flex;
@@ -24,6 +27,7 @@
 .card-image {
     width: 10em;
     height: auto;
+    position: relative;
 }
 
 #first-card {
@@ -35,5 +39,12 @@
 }
 #third-card {
     transform: rotate(20deg) translateX(-47px);
+    z-index: -1;
+}
+#pirate-card {
+    transform: rotate(-20deg) translateX(-14px);
+}
+#treasure-card {
+    transform: rotate(14deg) translateX(-54px) translateY(-56px);
     z-index: -1;
 }
