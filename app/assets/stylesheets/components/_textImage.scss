@@ -3,13 +3,16 @@
 
 .text-image-container {
   display: flex;
-  width: 50%;
+  // width: 50%;
   align-items: center;
   justify-content: space-around;
+
 }
 
 .image-container {
   display: flex;
+  height: 300px;
+  align-items: center;
   background-color: $light-gray;
   justify-content: center;
   transform: rotateZ(5deg);

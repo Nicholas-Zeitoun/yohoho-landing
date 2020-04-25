@@ -13,6 +13,26 @@
 @import "pages/index";
 
 // Webflow stylings
-@import "webflow/cashew-wall-friendlygames-com.webflow";
-@import "webflow/normalize";
-@import "webflow/webflow"
+// @import "webflow/cashew-wall-friendlygames-com.webflow";
+// @import "webflow/normalize";
+// @import "webflow/webflow"
+
+body {
+  background-color: white;
+}
+
+h3 {
+  font-family: Berlin-Sans-FB-Demi;
+  font-size: 42px;
+}
+
+  p {
+    font-family: Cabin;
+    color: #606060;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .yohoho-container {
+    max-width: 1000px;
+  }
