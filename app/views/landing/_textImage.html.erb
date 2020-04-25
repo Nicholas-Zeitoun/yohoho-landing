@@ -1,17 +1,28 @@
 
 
+<% @defaultClasses = 'col-xs-12 col-md-4 col-md-offset-2' %>
 
 
-<div class="row partial-section text-image-container">
+<div class="row partial-section text-image-container <%= @textImage[:reverse] ? 'reverse' : '' %>">
     <div class="col-xs-12 col-md-6">
         <h3><%= @textImage[:title] %></h3>
         <p><%= @textImage[:paragraph] %></p>
     </div>
 
-    <div class="col-xs-12 col-md-4 col-md-offset-2 image-container">
-        <%= image_tag ("gold-dubloon"), class: "card-image", id: "first-card"  %>
-        <%= image_tag ("bombs-away"), class: "card-image" , id: "second-card" %>
-        <%= image_tag ("emerald"), class: "card-image" , id: "third-card" %>
-    </div>
+    <% if @textImage[:type].eql?('cardFront') %>
+        <div class="<% @defaultClasses %> image-container">    
+            <%= image_tag ("gold-dubloon"), class: "card-image", id: "first-card" %>
+            <%= image_tag ("bombs-away"), class: "card-image" , id: "second-card" %>
+            <%= image_tag ("emerald"), class: "card-image" , id: "third-card" %>
+        </div>
+    <% end %>
+    <% if @textImage[:type].eql?('cardBack') %>
+        <div class="<% @defaultClasses %>">    
+            <%= image_tag ("pirate-card"), class: "card-image" , id: "pirate-card" %>
+            <%= image_tag ("treasure-card"), class: "card-image", id: "treasure-card" %>
+        </div>
+    <% end %>
+    
+
 
 </div>
