@@ -1,9 +1,16 @@
 .video-element {
   margin-top: 50px;
   border-radius: 8px;
-  width: 100%;
+  width: 80%;
   height: auto;
   min-height: 600px;
   text-align: center;
   box-shadow: 0 0 30px rgba(55,55,55,0.2);
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .video-element {
+    min-height: 300px;
+  }
 }
