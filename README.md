@@ -1,1 +1,11 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+# Yohoho Landing Page
+
+Set up:
+
+```Bundle install```
+```Yarn install```
+
+Run app:
+
+```rails s```
+http://localhost:3000/
