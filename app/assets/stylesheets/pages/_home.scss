@@ -1,1 +1,10 @@
 // Specific CSS for your home-page
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.partial-section {
+    margin: 5rem 0;
+}
