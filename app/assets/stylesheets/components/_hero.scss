@@ -14,15 +14,15 @@
   justify-content: center;
   align-items: center;
 
-  h1 {
-    font-family: Berlin-Sans-FB-Demi;
-    font-size: 72px;
-  }
+  // h1 {
+  //   font-family: Berlin-Sans-FB-Demi;
+  //   font-size: 72px;
+  // }
 
-  h3 {
-    font-family: Berlin-Sans-FB-Demi;
-    font-size: 42px;
-  }
+  // h3 {
+  //   font-family: Berlin-Sans-FB-Demi;
+  //   font-size: 42px;
+  // }
 
   p {
     font-family: Cabin;
@@ -43,6 +43,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   // margin-left: auto;
   // margin-right: auto;
   // left: 0;

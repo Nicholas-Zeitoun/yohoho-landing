@@ -23,12 +23,10 @@ body {
 
 h1 {
   font-family: Berlin-Sans-FB-Demi;
-  font-size: 72px;
 }
 
 h3 {
   font-family: Berlin-Sans-FB-Demi;
-  font-size: 42px;
 }
 
   p {
@@ -40,4 +38,47 @@ h3 {
 
   .yohoho-container {
     max-width: 1000px;
+    overflow: hidden;
   }
+
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  h1 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  h1 {
+    font-size: 44px;
+  }
+    h3 {
+    font-size: 24px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  h1 {
+    font-size: 72px;
+  }
+    h3 {
+    font-size: 42px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 72px;
+  }
+  h3 {
+    font-size: 42px;
+  }
+
+}
