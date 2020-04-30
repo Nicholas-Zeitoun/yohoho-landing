@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-12 text-center">
+    <h3>What's In Da Box?!</h3>
+    <% @text_image = {
+        reverse: true,
+        title: 'Take action',
+        text_size: 'h4',
+        paragraph: 'Are you ready for a bit of pillage and plunder? Get ready to loot and steal in this fast-paced game of piracy.',
+        type: 'single_text_image',
+        single_text_image: {
+            image: 'yohoho-box',
+            background_image: 'whats-in-da-box-prop',
+            size_offset: '17em',
+            x_offset: '0'
+        }
+    } %>
+
+    <%= render partial: "landing/text_image" %>
+
+    <div class="row mt-0 mb-4 text-center text-md-left">
+      <div class="col-12 col-md-6 d-flex flex-column flex-md-row">
+        <%= image_tag asset_path("treasure-cards"), class: "" %>
+        <div class="p-3">
+          <h5>The Treasure Cards</h5>
+          <p>Are you ready for a bit of pillage and plunder? Get ready to loot and steal in this fast-paced game of piracy.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 d-flex flex-column flex-md-row">
+        <%= image_tag asset_path("piracy-cards"), class: "" %>
+        <div class="p-3">
+          <h5>The Pirate Cards</h5>
+          <p>Are you ready for a bit of pillage and plunder? Get ready to loot and steal in this fast-paced game of piracy.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

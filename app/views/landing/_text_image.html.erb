@@ -7,6 +7,7 @@
     @type = @text_image[:type]
     @reverse = @text_image[:reverse]
     @title = @text_image[:title]
+    @text_size = @text_image[:text_size]
     @paragraph = @text_image[:paragraph]
     @is_single_text_image = @type.eql?('single_text_image')
 
@@ -26,7 +27,11 @@
     style="<%= @is_single_text_image ? @x_offset_string : '' %>"
 >
     <div class="col-xs-12 col-md-6">
+      <% if @text_size == "h4" %>
+        <h4><%= @title %></h4>
+      <% else %>
         <h3><%= @title %></h3>
+      <% end %>
         <p><%= @paragraph %></p>
     </div>
 
@@ -37,6 +42,7 @@
             <%= image_tag ("emerald"), class: "card-image" , id: "third-card" %>
         </div>
     <% end %>
+
     <% if @type.eql?('cardBack') %>
         <div class="<%= @image_container_classes %>">
             <%= image_tag ("pirate-card"), class: "card-image" , id: "pirate-card" %>
