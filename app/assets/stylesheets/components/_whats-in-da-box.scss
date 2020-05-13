@@ -1,0 +1,24 @@
+.indabox-title-underline {
+  width: 60%;
+  height: 25px;
+  background-color: #CFF587;
+  transform: rotate(1.1deg);
+  clip-path: polygon(0 2%, 100% 0, 99% 100%, 2% 98%);
+  position: relative;
+  top: -40px;
+  // right: 30px;
+  z-index: -1;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .video-element {
+    min-height: 300px;
+  }
+
+  .indabox-title-underline {
+    width: 85%;
+    height: 15px;
+    top: -25px;
+  }
+}
