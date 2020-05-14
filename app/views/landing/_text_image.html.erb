@@ -6,9 +6,10 @@
 
     @type = @text_image[:type]
     @reverse = @text_image[:reverse]
-    @title = @text_image[:title]
+     @title = @text_image[:title]
     @text_size = @text_image[:text_size]
     @paragraph = @text_image[:paragraph]
+    @margin = @text_image[:margin]
     @is_single_text_image = @type.eql?('single_text_image')
 
     if(@is_single_text_image)
@@ -23,7 +24,7 @@
 %>
 
 <div
-    class="<%= @image_text_classes %> <%= @reverse ? 'reverse' : '' %> <%= @is_single_text_image ? 'single-text-image-container' : '' %>"
+    class="<%= (@image_text_classes + ' ' + @margin) %><%= @reverse ? ' reverse' : '' %><%= @is_single_text_image ? ' single-text-image-container' : '' %>"
     style="<%= @is_single_text_image ? @x_offset_string : '' %>"
 >
     <div class="col-xs-12 col-md-6">
