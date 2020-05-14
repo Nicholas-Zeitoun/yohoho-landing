@@ -1,3 +1,4 @@
+<div class="yohoho-container">
 <%= render 'landing/header' %>
 
 <% @text_image = {
@@ -74,13 +75,22 @@
     type: 'cardBack',
     margin: 'mt-4'
 } %>
+
 <%= render partial: "landing/text_image" %>
+
+</div>
+
+<%#= render partial: "landing/testimonials" %>
+
+<div class="yohoho-container">
 
 <%= render partial: "landing/whats_in_da_box" %>
 
 <%= render partial: "landing/download_section" %>
 
 <%= render partial: "landing/sign_up_form" %>
+
+</div>
 
 
 

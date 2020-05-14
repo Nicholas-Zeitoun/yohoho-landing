@@ -1,0 +1,30 @@
+.testimonial-section {
+  color: white;
+  // height: 500px;
+  width: 100vw;
+  padding: 60px;
+  background-color: #171717;
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 96%);
+}
+
+.testimonials-container {
+  max-width: 1100px;
+}
+
+.testimonial-strip {
+  margin-top: 65px;
+  min-width: 80%;
+}
+
+.testimonial-avatar-placeholder {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.testimonial-star {
+  p {
+    color: #C6C261;
+  }
+}
