@@ -4,7 +4,8 @@
   width: 100vw;
   padding: 60px;
   background-color: #171717;
-  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 96%);
+  // clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 96%);
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
 }
 
 .testimonials-container {
@@ -26,5 +27,35 @@
 .testimonial-star {
   p {
     color: #C6C261;
+  }
+}
+
+.review-us-strip {
+  width: 100vw;
+  position: relative;
+}
+
+.review-background {
+  height: 500px;
+  width: 100%;
+  margin: -5px;
+  background-color: #171717;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
+}
+
+.review-us-strip-content {
+  color: white;
+  max-width: 1100px;
+  top: -60px;
+  position: absolute;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .review-background {
+    height: 30px;
+  }
+  .review-cards-asset, .review-us-strip-content {
+    display: none;
   }
 }
