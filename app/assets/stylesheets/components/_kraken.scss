@@ -1,0 +1,63 @@
+.kraken-container {
+  color: #FFF;
+  width: 100vw;
+  height: 800px;
+  overflow: hidden;
+  position: relative;
+}
+
+.wave-1 {
+  position: absolute;
+  bottom: -45%;
+  left: -4%;
+  width: 110%;
+  z-index: -1;
+}
+
+.wave-2 {
+  position: absolute;
+  bottom: -25%;
+  // left: -5%;
+  width: 110%;
+  z-index: -2;
+}
+
+.wave-3 {
+  position: absolute;
+  bottom: -35%;
+  // left: -50px;
+  width: 110%;
+  z-index: -3;
+}
+
+.kraken-asset {
+  position: absolute;
+  bottom: 22%;
+  left: 5%;
+  // width: 110%;
+  z-index: -4;
+}
+
+.wave-4 {
+  position: absolute;
+  bottom: -35%;
+  left: -5%;
+  width: 110%;
+  z-index: -5;
+}
+
+.wave-5 {
+  position: absolute;
+  bottom: -35%;
+  left: -5%;
+  width: 110%;
+  z-index: -6;
+}
+
+.wave-6 {
+  position: absolute;
+  bottom: -35%;
+  left: -5%;
+  width: 110%;
+  z-index: -7;
+}

@@ -9,10 +9,13 @@
     type: 'cardFront',
     margin: 'm-0'
 } %>
-<%= render partial: "landing/text_image" %>
+<div class="spacer-large">
+  <%= render partial: "landing/text_image" %>
+</div>
 
-
-<%= render 'landing/video_subsection' %>
+<div class="spacer-large">
+  <%= render 'landing/video_subsection' %>
+</div>
 
 <% @text_image = {
     reverse: true,
@@ -29,7 +32,9 @@
     }
 } %>
 
-<%= render partial: "landing/text_image" %>
+<div class="spacer-large">
+  <%= render partial: "landing/text_image" %>
+</div>
 
 <% @text_image = {
     reverse: false,
@@ -76,21 +81,29 @@
     margin: 'mt-4'
 } %>
 
-<%= render partial: "landing/text_image" %>
+<div class="spacer-large">
+  <%= render partial: "landing/text_image" %>
+</div>
 
 </div>
 
 <%= render partial: "landing/testimonials" %>
 
 <div class="yohoho-container">
+  <div class="spacer-large">
+    <%= render partial: "landing/whats_in_da_box" %>
+  </div>
 
-<%= render partial: "landing/whats_in_da_box" %>
+  <div class="spacer-large">
+    <%= render partial: "landing/download_section" %>
+  </div>
 
-<%= render partial: "landing/download_section" %>
-
-<%= render partial: "landing/sign_up_form" %>
-
+  <%= render partial: "landing/sign_up_form" %>
 </div>
+
+<%= render partial: "landing/kraken" %>
+
+<%= render partial: "landing/footer" %>
 
 
 
