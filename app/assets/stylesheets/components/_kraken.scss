@@ -36,6 +36,10 @@
   left: 5%;
   // width: 110%;
   z-index: -4;
+
+  img {
+    width: 800px;
+  }
 }
 
 .wave-4 {
@@ -60,4 +64,71 @@
   left: -5%;
   width: 110%;
   z-index: -7;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+
+  .kraken-container {
+    height: 400px;
+  }
+  .wave-1 {
+    position: absolute;
+    bottom: -450px;
+    left: -10%;
+    width: 110%;
+    z-index: -1;
+  }
+
+  .wave-2 {
+    position: absolute;
+    bottom: -350px;
+    left: -5%;
+    width: 110%;
+    z-index: -2;
+  }
+
+  .wave-3 {
+    position: absolute;
+    bottom: -400px;
+    left: -15px;
+    width: 110%;
+    z-index: -3;
+  }
+
+  .kraken-asset {
+    position: absolute;
+    bottom: 30%;
+    left: 10%;
+    z-index: -4;
+
+    img {
+      width: 300px;
+    }
+  }
+
+  .wave-4 {
+    position: absolute;
+    bottom: -550px;
+    left: -15%;
+    width: 110%;
+    z-index: -5;
+  }
+
+  .wave-5 {
+    position: absolute;
+    bottom: -620px;
+    left: -15%;
+    width: 110%;
+    z-index: -6;
+  }
+
+  .wave-6 {
+    display: none;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
 }
