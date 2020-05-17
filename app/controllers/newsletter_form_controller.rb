@@ -9,8 +9,7 @@ class NewsletterFormController < ApplicationController
     end
 
     def create
-        logger.info("create new signup formaaa")
-        @newsletterForm = NewsletterForm.create(signup_form_params)
+        @newsletterForm = NewsletterForm.create(newsletter_form_params)
         @newsletterForm.save
         redirect_to root_path, :notice => 'Thanks for signing up.'
     end

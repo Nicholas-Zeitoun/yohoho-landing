@@ -5,41 +5,22 @@
             <p>Be the first to know when the physical game becomes available for purchase</p>
         </div>
     </div>
-    <%= form_for :newsletter_form, as: :newsletter_form, url: '/newsletter-form', class: "signupForm" do |f| %>
+    <%= form_for :newsletter_form, url: '/newsletter-form', class: "signupForm" do |f| %>
     <div class="row">
         <div class="col-12 d-flex flex-column align-items-center flex-md-row justify-content-center">
             <div class="p-3">
                 <%= f.label :name, "Name:" %>
                 <%= f.text_field :name, class: "yohoho-input" %> <br />
-
-                <%
-=begin%>
-                <p>Name:</p>
-                <input class="yohoho-input" type="text" id="fname" name="fname">
-                <%
-=end%>
             </div>
             <div class="p-3">
                 <%= f.label :email, "Email:" %>
                 <%= f.text_field :email, class: "yohoho-input" %> <br />
-
-                <%
-=begin%>
-                <p>Email:</p>
-                <input class="yohoho-input" type="text" id="fname" name="fname">
-                <%
-=end%>
             </div>
         </div>
     </div>
     <div class="row text-center mt-4">
         <div class="col-12">
             <%= f.submit "Sign Up!", class: "btn yohoho-button" %>
-            <%
-=begin%>
-            <button type="button" class="btn yohoho-button">Sign Up!</button>
-            <%
-=end%>
         </div>
     </div>
     <% end %>
