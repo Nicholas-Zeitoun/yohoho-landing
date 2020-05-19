@@ -1,6 +1,6 @@
 <div class="yohoho-container">
 <%= render 'landing/header' %>
-
+<div id="landing-start"></div>
 <% @text_image = {
     reverse: false,
     title: 'Now here be a game for pirates!',
@@ -21,7 +21,7 @@
     reverse: true,
     title: 'Take action',
     text_size: 'h3',
-    paragraph: 'Are you ready for a bit of pillage and plunder? Get ready to loot and steal in this fast-paced game of piracy.',
+    paragraph: 'Every pirate gets TWO and ONLY TWO actions on their turn! Any combination of the four piratical actions are allowed. Mix and match your strategies to get ahead of the game.',
     type: 'single_text_image',
     margin: 'm-0',
     single_text_image: {
@@ -40,7 +40,7 @@
     reverse: false,
     title: 'Employ a little bit of piracy',
     text_size: 'h3',
-    paragraph: 'Are you ready for a bit of pillage and plunder? Get ready to loot and steal in this fast-paced game of piracy.',
+    paragraph: 'What better way to get treasure than by taking it from yer mateys? Wager or steal to reap your ill-gotten rewards. That be the pirate’s code!',
     type: 'single_text_image',
     single_text_image: {
         image: 'dag-icon',
@@ -57,7 +57,7 @@
     reverse: true,
     title: 'Gather the booty!',
     text_size: 'h3',
-    paragraph: 'Are you ready for a bit of pillage and plunder? Get ready to loot and steal in this fast-paced game of piracy.',
+    paragraph: 'Your aim be simple. Be the first to gather and bury your treasure. But beware! Each pirate will be looking to stash their own loot, and they may be eyeing to take some of yours!',
     type: 'single_text_image',
     single_text_image: {
         image: 'chest-flat',
@@ -74,9 +74,9 @@
 
 <% @text_image = {
     reverse: true,
-    title: 'Now here be a game for pirates!',
+    title: 'Prepare to set sails for fun anywhere, anytime!',
     text_size: 'h3',
-    paragraph: 'Are you ready for a bit of pillage and plunder? Get ready to loot and steal in this fast-paced game of piracy. Race your hearties to become the first pirate to bury all their treasure. and make sure to backstab as many as possible on the way to fame and fortune!',
+    paragraph: 'Pillaging on the high seas be simple and fun. Nothing here is rated ARRR! So this is the perfect game for friends and family alike! No need to be dragging anchor. With just one deck of cards, take this game with you and play on any tabletop.',
     type: 'cardBack',
     margin: 'mt-4'
 } %>
@@ -94,7 +94,7 @@
     <%= render partial: "landing/whats_in_da_box" %>
   </div>
 
-  <div class="spacer-large">
+  <div class="spacer-medium">
     <%= render partial: "landing/download_section" %>
   </div>
 
