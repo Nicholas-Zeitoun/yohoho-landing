@@ -2,7 +2,6 @@
   position: relative;
   // width: 900px;
   height: 600px;
-
 }
 
 .download-background {
@@ -27,7 +26,10 @@
   color: #363636;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  // &:hover {
+    // on hover state here
+  // }
 }
 
 .button-icon {
@@ -41,7 +43,7 @@
 .download-title-underline {
   width: 105%;
   height: 20px;
-  background-color: #F5B687;
+  background-color: #f5b687;
   transform: rotate(1deg);
   clip-path: polygon(0 2%, 100% 0, 99% 100%, 2% 98%);
   position: relative;
