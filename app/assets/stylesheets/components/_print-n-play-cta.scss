@@ -1,5 +1,5 @@
 .cta-row {
-
+  position: relative;
 }
 
 .cta-text {
@@ -25,4 +25,41 @@
   // background-color: red;
   z-index: -2;
   top: 0px;
+}
+
+.treasure-lines {
+  position: absolute;
+  overflow: visible;
+  bottom: 90px;
+  z-index: -100;
+}
+
+.treasure-lines-2 {
+  width: 1000px;
+  position: relative;
+  z-index: -2;
+  img {
+    top: -150px;
+    position: absolute;
+    left: calc(((100%-1100px)/2)*-1);
+  }
+}
+
+.treasure-lines-3 {
+  width: 1000px;
+  position: relative;
+  // z-index: -2;
+  img {
+    bottom: 150px;
+    position: absolute;
+    right: calc(((100%-1100px)/2)*-1);
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .treasure-lines, .treasure-lines-2 {
+    display: none;
+  }
+
 }
