@@ -8,6 +8,15 @@
   position: absolute;
   // color: white;
   top: 35%;
+
+  a {
+    color: #606060;
+    transition: 0.3s;
+    &:hover {
+      color: #000;
+      text-decoration: none;
+    }
+  }
 }
 
 .cta-cross {
