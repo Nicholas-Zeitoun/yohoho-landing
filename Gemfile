@@ -15,7 +15,7 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
-gem "actionview", ">= 5.2.4.2"
+gem "actionview", ">= 5.2.4.3"
 gem "activesupport", ">= 5.2.4.3"
 
 group :development do
