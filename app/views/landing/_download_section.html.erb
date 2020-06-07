@@ -10,22 +10,31 @@
 
     </div>
     <div class="col-12 col-md-5 d-flex flex-column align-items-center align-items-lg-start justify-content-center">
-        <a target="_blank" href="https://uploads-ssl.webflow.com/5d79944c26acc6f0a7e96822/5ec5363498978d6c3b8631ac_YOHOHO-Print-n-play.pdf" class="btn download-button m-3">
-            <div class="download-btn-content d-flex align-items-center">
-                <div class="button-icon">
-                    <i class="fas fa-print"></i>
-                </div>
-                Download the YoHoHo Print 'n play PDF
+        <%= form_for :download_counter, url: '/download', html: {class: 'download-counter-form'} do |f| %>
+        <%= f.hidden_field :type %>
+        <%= hidden_field_tag 'type', 'print-n-play' %>
+        <%= button_tag( :class => "btn download-button m-3", :formtarget => "_blank") do %>
+        <div class="download-btn-content d-flex align-items-center">
+            <div class="button-icon">
+                <i class="fas fa-print"></i>
             </div>
-        </a>
-        <a target="_blank" href="https://uploads-ssl.webflow.com/5d79944c26acc6f0a7e96822/5ec5f77e9818918b2003280b_YOHOHO-Rulebook-verbose.pdf" class="btn download-button m-3">
-            <div class="download-btn-content d-flex align-items-center">
-                <div class="button-icon">
-                    <i class="far fa-copy"></i>
-                </div>
-                Download the YoHoHo Rulebook PDF
+            Download the YoHoHo Print 'n play PDF
+        </div>
+        <% end %>
+        <% end %>
+
+        <%= form_for :download_counter, url: '/download', html: {class: 'download-counter-form'} do |f| %>
+        <%= f.hidden_field :type %>
+        <%= hidden_field_tag 'type', 'rulebook' %>
+        <%= button_tag( :class => "btn download-button m-3", :formtarget => "_blank") do %>
+        <div class="download-btn-content d-flex align-items-center">
+            <div class="button-icon">
+                <i class="far fa-copy"></i>
             </div>
-        </a>
+            Download the YoHoHo Rulebook PDF
+        </div>
+        <% end %>
+        <% end %>
     </div>
     <div class="download-background">
         <%= image_tag "dark-map.svg", alt: "alttext", width: "1100" %>

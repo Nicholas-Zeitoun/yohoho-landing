@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   post 'newsletter-form' => 'newsletter_form#create'
+  post 'download' => 'download_counter#create'
 
   # Review routes
   get 'reviews', to: 'reviews#index'

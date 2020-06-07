@@ -1,0 +1,2 @@
+class DownloadCounter < ApplicationRecord
+end
