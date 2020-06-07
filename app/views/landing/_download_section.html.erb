@@ -11,8 +11,8 @@
     </div>
     <div class="col-12 col-md-5 d-flex flex-column align-items-center align-items-lg-start justify-content-center">
         <%= form_for :download_counter, url: '/download', html: {class: 'download-counter-form'} do |f| %>
-        <%= f.hidden_field :type %>
-        <%= hidden_field_tag 'type', 'print-n-play' %>
+        <%= f.hidden_field :doc_type %>
+        <%= hidden_field_tag 'doc_type', 'print-n-play' %>
         <%= button_tag( :class => "btn download-button m-3", :formtarget => "_blank") do %>
         <div class="download-btn-content d-flex align-items-center">
             <div class="button-icon">
@@ -24,8 +24,8 @@
         <% end %>
 
         <%= form_for :download_counter, url: '/download', html: {class: 'download-counter-form'} do |f| %>
-        <%= f.hidden_field :type %>
-        <%= hidden_field_tag 'type', 'rulebook' %>
+        <%= f.hidden_field :doc_type %>
+        <%= hidden_field_tag 'doc_type', 'rulebook' %>
         <%= button_tag( :class => "btn download-button m-3", :formtarget => "_blank") do %>
         <div class="download-btn-content d-flex align-items-center">
             <div class="button-icon">
