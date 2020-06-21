@@ -19,31 +19,37 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <%= form_for :download_counter, url: '/download', html: {class: 'download-counter-form'} do |f| %>
-      <div class="modal-body">
-        <div class="p-3">
-          <%= f.label :name, "Name:" %>
-          <%= f.text_field :name, id: 'name-download', required: true, class: "yohoho-input" %> <br />
-        </div>
-        <div class="p-3">
-          <%= f.label :email, "Email:" %>
-          <%= f.email_field :email, id: 'email-download', required: true, class: "yohoho-input" %> <br />
-        </div>
+      <div id='thank-you-download' style="display:none;">
+        <p>Thank you for downloading!</p>
       </div>
-      <div class="modal-footer">
-        <%= f.hidden_field :doc_type %>
-        <%= hidden_field_tag 'doc_type', 'rulebook' %>
-        <%= button_tag 'Download now!', class: "btn yohoho-button", id: 'downloadButton', formtarget: "_blank" %>
+      <div id='download-form-container'>
+        <%= form_for :download_counter, url: '/download', html: {class: 'download-counter-form'} do |f| %>
+        <div class="modal-body">
+          <div>
+          </div>
+          <div class="p-3">
+            <%= f.label :name, "Name:" %>
+            <%= f.text_field :name, id: 'name-download', required: true, class: "yohoho-input" %> <br />
+          </div>
+          <div class="p-3">
+            <%= f.label :email, "Email:" %>
+            <%= f.email_field :email, id: 'email-download', required: true, class: "yohoho-input" %> <br />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <%= f.hidden_field :doc_type %>
+          <%= hidden_field_tag 'doc_type', 'rulebook' %>
+          <%= button_tag 'Download now!', class: "btn yohoho-button", id: 'downloadButton', formtarget: "_blank" %>
+        </div>
+        <% end %>
       </div>
-      <% end %>
     </div>
   </div>
 </div>
 
 <script>
-  $('#downloadButton').click(function() {
-    $('#downloadModal').modal('toggle');
-    $('#name-download').val('');
-    $('#email-download').val('');
+  $('#downloadButton').click(function(e) {
+    $('#download-form-container').css('display', 'none');
+    $('#thank-you-download').css('display', 'block');
   })
 </script>
