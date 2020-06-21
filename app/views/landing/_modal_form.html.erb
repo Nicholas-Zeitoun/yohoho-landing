@@ -1,0 +1,42 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <%= form_for :download_counter, url: '/download', html: {class: 'download-counter-form'} do |f| %>
+        <div class="modal-body">
+         <div class="p-3">
+             <%= f.label :name, "Name:" %>
+             <%= f.text_field :name, class: "yohoho-input" %> <br />
+         </div>
+         <div class="p-3">
+             <%= f.label :email, "Email:" %>
+             <%= f.email_field :email, class: "yohoho-input" %> <br />
+         </div>
+        </div>
+        <div class="modal-footer">
+          <%= f.hidden_field :doc_type %>
+          <%= hidden_field_tag 'doc_type', 'rulebook' %>
+          <%= button_tag( :class => "btn download-button m-3", :formtarget => "_blank") do %>
+            <div class="download-btn-content d-flex align-items-center">
+                <div class="button-icon">
+                    <i class="far fa-copy"></i>
+                </div>
+                Download the Stolen Treasure Rulebook PDF
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

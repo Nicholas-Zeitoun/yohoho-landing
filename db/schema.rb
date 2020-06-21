@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_07_053952) do
+ActiveRecord::Schema.define(version: 2020_06_21_024007) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "download_counters", force: :cascade do |t|
-    t.integer "counter"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "doc_type"
+    t.string "name"
+    t.string "email"
   end
 
   create_table "newsletter_forms", force: :cascade do |t|

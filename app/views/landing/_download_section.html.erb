@@ -23,18 +23,7 @@
         <% end %>
         <% end %>
 
-        <%= form_for :download_counter, url: '/download', html: {class: 'download-counter-form'} do |f| %>
-        <%= f.hidden_field :doc_type %>
-        <%= hidden_field_tag 'doc_type', 'rulebook' %>
-        <%= button_tag( :class => "btn download-button m-3", :formtarget => "_blank") do %>
-        <div class="download-btn-content d-flex align-items-center">
-            <div class="button-icon">
-                <i class="far fa-copy"></i>
-            </div>
-            Download the Stolen Treasure Rulebook PDF
-        </div>
-        <% end %>
-        <% end %>
+        <%= render partial: "landing/modal_form" %>
     </div>
     <div class="download-background">
         <%= image_tag "dark-map.svg", alt: "alttext", width: "1100" %>
