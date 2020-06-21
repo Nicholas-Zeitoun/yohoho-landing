@@ -1,31 +1,19 @@
 <div class="row download-container mt-4">
-    <div id="download-section" class="download-left-col col-12 col-md-7 d-flex flex-column align-items-center justify-content-center">
-        <%= image_tag "logo.svg", alt: "alttext", width: "200" %>
-        <h3 class="text-white text-center">You can play it right now!</h3>
+  <div id="download-section" class="download-left-col col-12 col-md-7 d-flex flex-column align-items-center justify-content-center">
+    <%= image_tag "logo.svg", alt: "alttext", width: "200" %>
+    <h3 class="text-white text-center">You can play it right now!</h3>
 
-        <div class="download-underline-container d-flex flex-column align-items-center">
-            <h3 class="text-white text-center">Get it today!</h3>
-            <div class="download-title-underline"></div>
-        </div>
+    <div class="download-underline-container d-flex flex-column align-items-center">
+      <h3 class="text-white text-center">Get it today!</h3>
+      <div class="download-title-underline"></div>
+    </div>
 
-    </div>
-    <div class="col-12 col-md-5 d-flex flex-column align-items-center align-items-lg-start justify-content-center">
-        <%= form_for :download_counter, url: '/download', html: {class: 'download-counter-form'} do |f| %>
-        <%= f.hidden_field :doc_type %>
-        <%= hidden_field_tag 'doc_type', 'print-n-play' %>
-        <%= button_tag( :class => "btn download-button m-3", :formtarget => "_blank") do %>
-        <div class="download-btn-content d-flex align-items-center">
-            <div class="button-icon">
-                <i class="fas fa-print"></i>
-            </div>
-            Download the Stolen Treasure Print 'n play PDF
-        </div>
-        <% end %>
-        <% end %>
+  </div>
+  <div class="col-12 col-md-5 d-flex flex-column align-items-center align-items-lg-start justify-content-center">
 
-        <%= render partial: "landing/modal_form" %>
-    </div>
-    <div class="download-background">
-        <%= image_tag "dark-map.svg", alt: "alttext", width: "1100" %>
-    </div>
+    <%= render partial: "landing/modal_form" %>
+  </div>
+  <div class="download-background">
+    <%= image_tag "dark-map.svg", alt: "alttext", width: "1100" %>
+  </div>
 </div>
