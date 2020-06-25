@@ -1,18 +1,18 @@
 <div class="row download-container mt-4">
-  <div id="download-section" class="download-left-col col-12 col-md-7 d-flex flex-column align-items-center justify-content-center">
+  <!-- Download section main elements -->
+  <div id="download-section" class="download-left-col col-12 d-flex flex-column align-items-center justify-content-center">
     <%= image_tag "logo.svg", alt: "alttext", width: "200" %>
     <h3 class="text-white text-center">You can play it right now!</h3>
-
     <div class="download-underline-container d-flex flex-column align-items-center">
       <h3 class="text-white text-center">Get it today!</h3>
       <div class="download-title-underline"></div>
     </div>
-
   </div>
-  <div class="col-12 col-md-5 d-flex flex-column align-items-center align-items-lg-start justify-content-center">
-
+  <!-- Download button partial -->
+  <div class="col-12 d-flex flex-column align-items-center">
     <%= render partial: "landing/modal_form" %>
   </div>
+  <!-- Download section background -->
   <div class="download-background">
     <%= image_tag "dark-map.svg", alt: "alttext", width: "1100" %>
   </div>

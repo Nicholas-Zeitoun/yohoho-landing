@@ -1,5 +1,4 @@
 <!-- Button trigger modal -->
-
 <button class="btn download-button m-3" data-toggle="modal" data-target="#downloadModal">
   <div class="download-btn-content d-flex align-items-center">
     <div class="button-icon">
@@ -12,20 +11,24 @@
 <!-- Modal -->
 <div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="downloadModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="downloadModalLabel">Download Stolen Treasure</h5>
+    <div class="modal-content download-modal">
+      <div class="modal-header border-0">
+        <!-- <h5 class="modal-title" id="downloadModalLabel">Download Stolen Treasure</h5> -->
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div id='thank-you-download' style="display:none;">
-        <p>Thank you for downloading!</p>
+      <div class="text-center p-3" id='thank-you-download' style="display:none;">
+        <%= image_tag "logo.svg", alt: "alttext", width: "100" %>
+        <h5>Thank ye kindly!</h5>
+        <p>A dispatch of print-n-play papers have been sent to your mail! 🦜</p>
       </div>
       <div id='download-form-container'>
         <%= form_for :download_counter, url: '/download', html: {class: 'download-counter-form'} do |f| %>
-        <div class="modal-body">
-          <div>
+        <div class="modal-body d-flex justify-content-center align-items-center flex-column">
+          <div class="text-center">
+            <h5>Shiver me timbers! Looks like we need some coordinates!</h5>
+            <p>Please kindly provide yer mailing detail so that we may be sending you the spoils ☠️</p>
           </div>
           <div class="p-3">
             <%= f.label :name, "Name:" %>
@@ -36,7 +39,7 @@
             <%= f.email_field :email, id: 'email-download', required: true, class: "yohoho-input" %> <br />
           </div>
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer d-flex justify-content-center border-0">
           <%= f.hidden_field :doc_type %>
           <%= hidden_field_tag 'doc_type', 'rulebook' %>
           <%= button_tag 'Download now!', class: "btn yohoho-button", id: 'downloadButton', formtarget: "_blank" %>
