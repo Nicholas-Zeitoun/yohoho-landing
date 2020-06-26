@@ -19,6 +19,8 @@ gem 'uglifier'
 gem 'webpacker'
 gem "actionview", ">= 5.2.4.3"
 gem "activesupport", ">= 5.2.4.3"
+gem "letter_opener", group: :development
+gem 'postmark-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

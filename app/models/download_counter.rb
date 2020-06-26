@@ -5,5 +5,4 @@ class DownloadCounter < ApplicationRecord
     format: { with: URI::MailTo::EMAIL_REGEXP,
     :message => 'Invalid e-mail! Please provide a valid e-mail address' },
     uniqueness: { case_sensitive: false }
-  
 end
