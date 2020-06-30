@@ -8,11 +8,16 @@ class SignUpMailer < ApplicationMailer
     raise
   end
 
-  #
   def printnplay(download_signup)
     @greeting = "Ahoy matey!"
+    @sign_up_name = download_signup.name
 
-    mail to: download_signup.email
+    mail(
+      subject: 'Stolen Treasure! | Print and play download ☠️',
+      to: download_signup.email,
+      from: 'ahoy@stolentreasure.com',
+      track_opens: 'true'
+    )
   end
 
   def hello
