@@ -15,7 +15,7 @@ class SignUpMailer < ApplicationMailer
     mail(
       subject: 'Stolen Treasure! | Print and play download ☠️',
       to: download_signup.email,
-      from: 'ahoy@stolentreasure.com',
+      from: 'admin@stolentreasure.com',
       track_opens: 'true'
     )
   end
